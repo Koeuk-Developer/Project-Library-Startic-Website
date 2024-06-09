@@ -1,0 +1,92 @@
+@import "./variable";
+@import "../group-mixus/flex-mixus";
+@import "../group-mixus/grid-mixus";
+@import "../responsive/responsive";
+footer{
+    font-size: 20px;
+    background: #00b8be58 ;
+    height: 180px;
+    margin-top: 40px;
+    @include centered;
+    padding: 0px 90px;
+    @include responsive(Tablet){
+        font-size: 15px;
+        padding: 0px 50px;
+        height: 150px;
+    }
+    @include responsive(Mobile){
+        justify-content: center;
+        height: 70px;
+    }
+    .footer-left{
+        h3{
+            @include responsive(Mobile){
+                font-size: 15px;
+            }
+        }
+        @include flex-coloum;
+        .email{
+            @include contact;
+            img{
+                width: 30px;
+                @include responsive(Mobile){
+                    width: 20px;
+                }
+            }
+            p{
+                margin-top: -5px;
+                @include responsive(Tablet){
+                    font-size: 15px;
+                }
+                @include responsive(Mobile){
+                    font-size: 10px;
+                }
+            }
+        }
+        .phone-call{
+            @include contact;
+            img{
+                width: 38px;
+                margin-left: -5px;
+                @include responsive(Mobile){
+                    width: 28px;
+                }
+            }
+            p{
+                margin-top: 2px;
+                @include responsive(Tablet){
+                    font-size: 15px;
+                }
+                @include responsive(Mobile){
+                    font-size: 10px;
+                }
+            }
+        }
+        @include responsive(Mobile){
+            display: none;
+        }
+    }
+    .footer-right{
+        h3{
+            text-align: center;
+            @include responsive(Mobile){
+                font-size: 15px;
+            }
+        }
+        .icon{
+            padding: 10px;
+            @include responsive(Mobile){
+                padding: 0px;
+            }
+            img{
+                width: 30px;
+                margin-left: 15px;
+                margin-top: 10px;
+                @include responsive(Mobile){
+                    width: 20px;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}
